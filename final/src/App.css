@@ -1,0 +1,230 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: unset;
+}
+
+button,
+input {
+  cursor: pointer;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #1c2c4c;
+  color: #4c768d;
+  padding-top: 60px;
+}
+
+/* navbar */
+.nav-bar {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4c768d;
+  color: #242443;
+  height: 60px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.nav-bar .nav-bar__center {
+  display: flex;
+  gap: 12px;
+}
+.nav-bar .nav-bar__center .chat-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.sign-in {
+  border: none;
+  background-color: transparent;
+}
+.nav-bar .sign-in > img {
+  height: 30px;
+  width: auto;
+}
+.nav-bar .sign-out {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #88dded;
+  border: 1px solid #1c2c4c;
+  background-color: #1c2c4c;
+  font-weight: 600;
+}
+
+/* loading state */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+}
+
+/* welcome page */
+.welcome {
+  padding: 30px;
+  text-align: center;
+  margin-top: 40px;
+  color: #7cc5d9;
+}
+.welcome :is(h2, p, img) {
+  margin-bottom: 20px;
+}
+
+/* chat rooms */
+.chat-rooms-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-inline: auto;
+}
+.chat-room-card {
+  padding: 20px;
+  background-color: #7cc5d9;
+  color: #1c2c4c;
+  border-radius: 10px;
+  box-shadow: -2px 2px 1px 1px #4c768d;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  text-align: center;
+}
+.chat-room-card button {
+  padding: 10px;
+}
+
+/* chat component */
+.messages-wrapper {
+  padding: 30px;
+  margin-bottom: 60px;
+}
+.messages-wrapper .chat-bubble {
+  border-radius: 20px 20px 20px 0;
+  padding: 15px;
+  background-color: #7cc5d9;
+  color: #1c2c4c;
+  width: max-content;
+  max-width: calc(100% - 50px);
+  box-shadow: -2px 2px 1px 1px #4c768d;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.messages-wrapper .chat-bubble__details {
+  display: flex;
+}
+.messages-wrapper .chat-bubble.right {
+  margin-left: auto;
+  border-radius: 20px 20px 0 20px;
+  background-color: #fff;
+  box-shadow: -2px 2px 1px 1px #88dded;
+}
+.messages-wrapper .chat-bubble__left {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: #4c768d;
+}
+.messages-wrapper .chat-bubble__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 12px;
+  gap: 12px;
+}
+.messages-wrapper .chat-bubble__date {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.messages-wrapper .chat-bubble__delete {
+  background-color: transparent;
+  border: none;
+  margin-bottom: -4px;
+}
+.messages-wrapper .user-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #1c2c4c;
+}
+.messages-wrapper .user-message {
+  word-break: break-all;
+}
+.messages-wrapper .message-time {
+  display: block;
+  text-align: right;
+}
+
+/* send message */
+.send-message {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 20px 30px;
+  background-color: #4c768d;
+  display: flex;
+}
+.send-message > input {
+  height: 40px;
+  padding: 10px 10px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  flex-grow: 1;
+  background-color: white;
+  color: #1c2c4c;
+  font-size: 1rem;
+}
+.send-message > input:disabled {
+  background-color: #ddd;
+  color: #7cc5d9;
+  cursor: not-allowed;
+}
+.send-message > input:placeholder {
+  color: #ddd;
+}
+.send-message > :is(input, button):focus {
+  outline: none;
+  border-bottom: 1px solid #7cc5d9;
+}
+.send-message > button {
+  width: 70px;
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 0 5px 5px 0;
+  color: #242443;
+  border: 1px solid #7cc5d9;
+  background-color: #7cc5d9;
+  font-weight: 600;
+}
+.send-message > button:disabled {
+  background-color: #ddd;
+  color: #7cc5d9;
+  border: 1px solid #ddd;
+  cursor: not-allowed;
+}
