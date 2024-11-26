@@ -1,9 +1,8 @@
 # Build a Secure Chat Application with React, Permit.io, and Firebase :writing_hand:
 
-This repository contains the demo project for building a secure chat application using React, Firebase, and Permit.io for role-based access control (ReBAC). Users are assigned roles like Member and Moderator, with permissions to perform different CRUD operations in real-time chat rooms. Check out the full tutorial on [the Permit blog](https://permit.io/blog).
+This repository contains the demo project for building a secure chat application using React, Firebase, and Permit.io for role-based access control (ReBAC). Users are assigned roles like Member and Moderator, with permissions to perform different CRUD operations in real-time chat rooms. Check out the full tutorial on [the Permit blog][https://permit.io/blog](https://www.permit.io/blog/coding-tutorial-build-a-secure-chat-app-with-react-firebase-and-permitio).
 
-Visit my blog, [Timonwa's Notes](https://tech.timonwa.com/blog), for awesome
-technical content such as articles, code snippets, tech goodies, community
+Visit my blog, [Timonwa's Notes](https://tech.timonwa.com/blog), for more awesome technical content such as articles, code snippets, tech goodies, community
 projects, and more.
 
 If you find this repository helpful, please give it a ⭐ to show your support!
